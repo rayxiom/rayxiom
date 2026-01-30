@@ -20,7 +20,7 @@ export async function test({ overrides }: OptionsOverrides = {}): Promise<
 
   return [
     {
-      name: "so1ve/test/setup",
+      name: "rayxiom/test/setup",
       // @keep-sorted
       plugins: {
         "jest-formatting": pluginJestFormatting,
@@ -29,7 +29,7 @@ export async function test({ overrides }: OptionsOverrides = {}): Promise<
       },
     },
     {
-      name: "so1ve/test/rules",
+      name: "rayxiom/test/rules",
       files: GLOB_TESTS,
       // @keep-sorted
       rules: {

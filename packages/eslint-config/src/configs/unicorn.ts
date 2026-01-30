@@ -3,14 +3,14 @@ import type { TypedFlatConfigItem } from "../types";
 
 export const unicorn = (): TypedFlatConfigItem[] => [
   {
-    name: "so1ve/unicorn/setup",
+    name: "rayxiom/unicorn/setup",
 
     plugins: {
       unicorn: pluginUnicorn,
     },
   },
   {
-    name: "so1ve/unicorn/rules",
+    name: "rayxiom/unicorn/rules",
     // @keep-sorted
     rules: {
       "unicorn/consistent-assert": "error",

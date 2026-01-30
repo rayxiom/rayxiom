@@ -12,13 +12,13 @@ export async function toml({ overrides }: OptionsOverrides = {}): Promise<
 
   return [
     {
-      name: "so1ve/toml/setup",
+      name: "rayxiom/toml/setup",
       plugins: {
         toml: pluginToml,
       },
     },
     {
-      name: "so1ve/toml/rules",
+      name: "rayxiom/toml/rules",
       languageOptions: {
         parser: parserToml,
       },

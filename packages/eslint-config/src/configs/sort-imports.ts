@@ -2,10 +2,10 @@ import type { TypedFlatConfigItem } from "../types";
 
 export const sortImports = (): TypedFlatConfigItem[] => [
   {
-    name: "so1ve/sort-imports/rules",
+    name: "rayxiom/sort-imports/rules",
     rules: {
-      "so1ve/sort-imports": "error",
-      "so1ve/sort-exports": "error",
+      "rayxiom/sort-imports": "error",
+      "rayxiom/sort-exports": "error",
     },
   },
 ];

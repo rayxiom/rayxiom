@@ -3,13 +3,13 @@ import type { TypedFlatConfigItem } from "../types";
 
 export const promise = (): TypedFlatConfigItem[] => [
   {
-    name: "so1ve/promise/setup",
+    name: "rayxiom/promise/setup",
     plugins: {
       promise: pluginPromise,
     },
   },
   {
-    name: "so1ve/promise/rules",
+    name: "rayxiom/promise/rules",
     rules: { "promise/param-names": "error" },
   },
 ];

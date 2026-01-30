@@ -12,21 +12,21 @@ export async function formatting(
   return (
     [
       {
-        name: "so1ve/formatting/setup",
+        name: "rayxiom/formatting/setup",
         plugins: {
           style: pluginStylistic,
         },
       },
       {
-        name: "so1ve/formatting/rules",
+        name: "rayxiom/formatting/rules",
         // @keep-sorted
         rules: {
           "curly": ["error", "all"],
-          "so1ve/function-style": "error",
-          "so1ve/import-export-newline": "error",
-          "so1ve/no-import-promises-as": "error",
-          "so1ve/no-negated-comparison": "error",
-          "so1ve/no-useless-template-string": "error",
+          "rayxiom/function-style": "error",
+          "rayxiom/import-export-newline": "error",
+          "rayxiom/no-import-promises-as": "error",
+          "rayxiom/no-negated-comparison": "error",
+          "rayxiom/no-useless-template-string": "error",
           "style/lines-between-class-members": [
             "error",
             "always",
@@ -61,7 +61,7 @@ export async function formatting(
       },
       (options?.jsonc ?? true) && [
         {
-          name: "so1ve/formatting/rules/sort-package-json",
+          name: "rayxiom/formatting/rules/sort-package-json",
           files: [GLOB_PACKAGEJSON],
           rules: {
             "jsonc/sort-keys": [
@@ -169,7 +169,7 @@ export async function formatting(
           },
         },
         {
-          name: "so1ve/formatting/rules/sort-tsconfig",
+          name: "rayxiom/formatting/rules/sort-tsconfig",
           files: GLOB_TSCONFIG,
           rules: {
             "jsonc/sort-array-values": [
@@ -312,7 +312,7 @@ export async function formatting(
         },
       ],
       (options?.test ?? true) && {
-        name: "so1ve/formatting/rules/test",
+        name: "rayxiom/formatting/rules/test",
         files: GLOB_TESTS,
         rules: {
           "jest-formatting/padding-around-all": "error",

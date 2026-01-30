@@ -12,13 +12,13 @@ export async function yaml({ overrides }: OptionsOverrides = {}): Promise<
 
   return [
     {
-      name: "so1ve/yaml/setup",
+      name: "rayxiom/yaml/setup",
       plugins: {
         yaml: pluginYaml,
       },
     },
     {
-      name: "so1ve/yaml/rules",
+      name: "rayxiom/yaml/rules",
       languageOptions: {
         parser: parserYaml,
       },

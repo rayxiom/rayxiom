@@ -3,13 +3,13 @@ import type { TypedFlatConfigItem } from "../types";
 
 export const comments = (): TypedFlatConfigItem[] => [
   {
-    name: "so1ve/comments/setup",
+    name: "rayxiom/comments/setup",
     plugins: {
       "eslint-comments": pluginComments,
     },
   },
   {
-    name: "so1ve/comments/rules",
+    name: "rayxiom/comments/rules",
     // @keep-sorted
     rules: {
       "eslint-comments/disable-enable-pair": "off",

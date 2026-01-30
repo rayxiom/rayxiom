@@ -11,5 +11,5 @@ export function ignores(
       ? userIgnores(ignores)
       : [...ignores, ...userIgnores];
 
-  return [{ name: "so1ve/ignores", ignores }];
+  return [{ name: "rayxiom/ignores", ignores }];
 }

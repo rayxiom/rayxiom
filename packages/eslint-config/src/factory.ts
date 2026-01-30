@@ -64,7 +64,7 @@ export const defaultPluginRenaming = {
 /**
  * Construct an array of ESLint flat config items.
  */
-export function so1ve(
+export function rayxiom(
   options: Options & TypedFlatConfigItem = {},
   ...userConfigs: MaybeArray<TypedFlatConfigItem>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {

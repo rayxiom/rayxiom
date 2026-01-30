@@ -1,5 +1,5 @@
 {
-  "name": "@so1ve/eslint-config",
+  "name": "@rayxiom/eslint-config",
   "version": "4.3.0",
   "author": "Ray <i@mk1.io> (https://github.com/so1ve/)",
   "type": "module",
@@ -8,13 +8,13 @@
     "eslint",
     "eslint-config"
   ],
-  "homepage": "https://github.com/so1ve/codestyle-config#readme",
+  "homepage": "https://github.com/rayxiom/rayxiom#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/so1ve/codestyle-config.git"
+    "url": "git+https://github.com/rayxiom/rayxiom.git"
   },
   "bugs": {
-    "url": "https://github.com/so1ve/codestyle-config/issues"
+    "url": "https://github.com/rayxiom/rayxiom/issues"
   },
   "license": "MIT",
   "exports": {
@@ -37,7 +37,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "catalog:eslint",
     "@html-eslint/eslint-plugin": "catalog:eslint",
     "@html-eslint/parser": "catalog:eslint",
-    "@so1ve/eslint-plugin": "workspace:*",
+    "@rayxiom/eslint-plugin": "workspace:*",
     "@stylistic/eslint-plugin": "catalog:eslint",
     "@typescript-eslint/parser": "catalog:eslint",
     "@typescript-eslint/utils": "catalog:eslint",

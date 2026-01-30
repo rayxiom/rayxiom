@@ -4,8 +4,8 @@ import { GLOB_SRC, GLOB_SRC_EXT } from "../globs";
 import {
   pluginArrayFunc,
   pluginNoAwaitInPromise,
+  pluginRayxiom,
   pluginRegexp,
-  pluginSo1ve,
   pluginUnusedImports,
 } from "../plugins";
 import type { OptionsOverrides, TypedFlatConfigItem } from "../types";
@@ -17,17 +17,17 @@ export async function javascript({ overrides }: OptionsOverrides = {}): Promise<
 
   return [
     {
-      name: "so1ve/javascript/setup",
+      name: "rayxiom/javascript/setup",
       // @keep-sorted
       plugins: {
         "array-func": pluginArrayFunc,
         "no-await-in-promise": pluginNoAwaitInPromise,
-        "so1ve": pluginSo1ve,
+        "rayxiom": pluginRayxiom,
         "unused-imports": pluginUnusedImports,
       },
     },
     {
-      name: "so1ve/javascript/rules",
+      name: "rayxiom/javascript/rules",
       languageOptions: {
         ecmaVersion: "latest",
         globals: {
@@ -296,11 +296,11 @@ export async function javascript({ overrides }: OptionsOverrides = {}): Promise<
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
-        "require-await": "off",
 
-        // so1ve
-        "so1ve/import-dedupe": "error",
-        "so1ve/require-async-with-await": "error",
+        // rayxiom
+        "rayxiom/import-dedupe": "error",
+        "rayxiom/require-async-with-await": "error",
+        "require-await": "off",
         "switch-colon-spacing": "off",
         "symbol-description": "off",
 
@@ -332,14 +332,14 @@ export async function javascript({ overrides }: OptionsOverrides = {}): Promise<
     },
     {
       ...regexpRecommended,
-      name: "so1ve/javascript/regexp",
+      name: "rayxiom/javascript/regexp",
       rules: {
         ...regexpRecommended.rules,
         "regexp/no-unused-capturing-group": "off",
       },
     },
     {
-      name: "so1ve/javascript/cli",
+      name: "rayxiom/javascript/cli",
       files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
       rules: {
         "no-console": "off",

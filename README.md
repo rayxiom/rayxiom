@@ -1,6 +1,6 @@
 # Ray's Codestyle Config
 
-[![npm](https://img.shields.io/npm/v/@so1ve/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@so1ve/eslint-config)
+[![npm](https://img.shields.io/npm/v/@rayxiom/eslint-config?color=a1b858&label=)](https://npmjs.com/package/@rayxiom/eslint-config)
 
 > Forked from [antfu/eslint-config](https://github.com/antfu/eslint-config)
 
@@ -28,21 +28,21 @@
 ### Install
 
 ```bash
-pnpm add -D eslint prettier @so1ve/eslint-config @so1ve/prettier-config
+pnpm add -D eslint prettier @rayxiom/eslint-config @rayxiom/prettier-config
 ```
 
 ### Config `eslint.config.mjs` and `prettier.config.mjs`
 
 ```js
 // eslint.config.mjs
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve();
+export default rayxiom();
 ```
 
 ```js
 // prettier.config.mjs
-export { default } from "@so1ve/prettier-config";
+export { default } from "@rayxiom/prettier-config";
 ```
 
 > Note that `.eslintignore` no longer works in Flat config, see [customization](#customization) for more details.
@@ -94,22 +94,22 @@ Create `.vscode/settings.json`
 
 Since v1.0, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides a much better organization and composition.
 
-Normally you only need to import the `so1ve` preset:
+Normally you only need to import the `rayxiom` preset:
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve();
+export default rayxiom();
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve(
+export default rayxiom(
   {
     typescript: true,
     vue: true,
@@ -128,15 +128,15 @@ export default so1ve(
 );
 ```
 
-The `so1ve` factory function also accepts any number of arbitrary custom config overrides:
+The `rayxiom` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve(
+export default rayxiom(
   {
-    // Configures for so1ve's config
+    // Configures eslint
   },
   // From the second arguments they are ESLint Flat Configs
   // you can have multiple configs
@@ -177,9 +177,9 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve(
+export default rayxiom(
   { vue: true, typescript: true },
   {
     // Remember to specify the file glob here, otherwise it might cause the vue plugin to handle non-vue files
@@ -201,9 +201,9 @@ We also provided a `overrides` options in each integration to make it easier:
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve({
+export default rayxiom({
   vue: {
     overrides: {
       "vue/operator-linebreak": ["error", "before"],
@@ -224,17 +224,17 @@ export default so1ve({
 
 ### Config Composer
 
-The factory function `so1ve()` returns a [`FlatConfigComposer` object from `eslint-flat-config-utils`](https://github.com/antfu/eslint-flat-config-utils#composer) where you can chain the methods to compose the config even more flexibly.
+The factory function `rayxiom()` returns a [`FlatConfigComposer` object from `eslint-flat-config-utils`](https://github.com/antfu/eslint-flat-config-utils#composer) where you can chain the methods to compose the config even more flexibly.
 
 ```js
 // eslint.config.js
-import { so1ve } from "@so1ve/eslint-config";
+import { rayxiom } from "@rayxiom/eslint-config";
 
-export default so1ve()
+export default rayxiom()
   // some configs before the main config
   .prepend()
   // overrides any named configs
-  .override("so1ve/imports/rules", {
+  .override("rayxiom/imports/rules", {
     rules: {
       "import/named": "off",
     },

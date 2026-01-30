@@ -225,13 +225,13 @@ importers:
       '@antfu/ni':
         specifier: catalog:build
         version: 28.0.0
-      '@so1ve/eslint-config':
+      '@rayxiom/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
-      '@so1ve/eslint-plugin':
+      '@rayxiom/eslint-plugin':
         specifier: workspace:*
         version: link:packages/eslint-plugin
-      '@so1ve/prettier-config':
+      '@rayxiom/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
@@ -291,7 +291,7 @@ importers:
       '@html-eslint/parser':
         specifier: catalog:eslint
         version: 0.52.0(jiti@2.6.1)
-      '@so1ve/eslint-plugin':
+      '@rayxiom/eslint-plugin':
         specifier: workspace:*
         version: link:../eslint-plugin
       '@stylistic/eslint-plugin':

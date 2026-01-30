@@ -3,9 +3,9 @@ import fs from "node:fs/promises";
 import { builtinRules } from "eslint/use-at-your-own-risk";
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
 
-import { so1ve } from "../src";
+import { rayxiom } from "../src";
 
-const configs = await so1ve(
+const configs = await rayxiom(
   // @keep-sorted
   {
     astro: true,
