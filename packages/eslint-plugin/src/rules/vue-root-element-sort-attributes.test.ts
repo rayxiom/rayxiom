@@ -4,7 +4,7 @@ import { describe, expect } from "vitest";
 
 import type { Options } from "./vue-root-element-sort-attributes";
 
-const valid: ValidTestCase<Options>[] = [
+const _valid: ValidTestCase<Options>[] = [
   // Basic correct order
   $`
     <script setup lang="ts"></script>
@@ -92,7 +92,7 @@ const valid: ValidTestCase<Options>[] = [
     ],
   },
 ];
-const invalid: InvalidTestCase<Options>[] = [
+const _invalid: InvalidTestCase<Options>[] = [
   // Basic wrong order
   '<script lang="ts" setup></script>',
   // Multiple elements with wrong order
