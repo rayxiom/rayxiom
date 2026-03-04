@@ -21,8 +21,6 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "files": [
     "dist"
@@ -56,7 +54,6 @@
     "eslint-plugin-html": "catalog:eslint",
     "eslint-plugin-import-lite": "catalog:eslint",
     "eslint-plugin-import-x": "catalog:eslint",
-    "eslint-plugin-jest-formatting": "catalog:eslint",
     "eslint-plugin-jsonc": "catalog:eslint",
     "eslint-plugin-mdx": "catalog:eslint",
     "eslint-plugin-n": "catalog:eslint",

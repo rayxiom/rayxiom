@@ -25,9 +25,12 @@ export async function toml({ overrides }: OptionsOverrides = {}): Promise<
       files: [GLOB_TOML],
       // @keep-sorted
       rules: {
-        ...(pluginToml.configs.recommended.rules as any),
         "no-irregular-whitespace": "off",
         "style/spaced-comment": "off",
+        "toml/no-unreadable-number-separator": "error",
+        "toml/precision-of-fractional-seconds": "error",
+        "toml/precision-of-integer": "error",
+        "toml/vue-custom-block/no-parsing-error": "error",
         ...overrides,
       },
     },

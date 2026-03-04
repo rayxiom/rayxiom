@@ -5,25 +5,19 @@ import { interopDefault } from "../utils";
 export async function test({ overrides }: OptionsOverrides = {}): Promise<
   TypedFlatConfigItem[]
 > {
-  const [pluginNoOnlyTests, pluginVitest, pluginJestFormatting] =
-    await Promise.all([
-      interopDefault(
-        // @ts-expect-error No declaration
-        import("eslint-plugin-no-only-tests"),
-      ),
-      interopDefault(import("@vitest/eslint-plugin")),
-      interopDefault(
-        // @ts-expect-error No declaration
-        import("eslint-plugin-jest-formatting"),
-      ),
-    ]);
+  const [pluginNoOnlyTests, pluginVitest] = await Promise.all([
+    interopDefault(
+      // @ts-expect-error No declaration
+      import("eslint-plugin-no-only-tests"),
+    ),
+    interopDefault(import("@vitest/eslint-plugin")),
+  ]);
 
   return [
     {
       name: "rayxiom/test/setup",
       // @keep-sorted
       plugins: {
-        "jest-formatting": pluginJestFormatting,
         "no-only-tests": pluginNoOnlyTests,
         "vitest": pluginVitest,
       },

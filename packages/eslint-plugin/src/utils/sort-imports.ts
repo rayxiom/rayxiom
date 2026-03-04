@@ -467,8 +467,7 @@ export function printSortedItems<TNode extends SourceNode>(
     : undefined;
 
   const maybeNewline =
-    nextToken != null &&
-    nextToken.loc.start.line === lastOriginalItem.node.loc.end.line
+    nextToken?.loc.start.line === lastOriginalItem.node.loc.end.line
       ? newline
       : "";
 

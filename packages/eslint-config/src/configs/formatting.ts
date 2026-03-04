@@ -315,7 +315,7 @@ export async function formatting(
         name: "rayxiom/formatting/rules/test",
         files: GLOB_TESTS,
         rules: {
-          "jest-formatting/padding-around-all": "error",
+          "vitest/padding-around-all": "error",
         },
       },
     ] satisfies (MaybeArray<TypedFlatConfigItem> | boolean)[]
