@@ -86,7 +86,6 @@ export async function vue({
             },
           },
         ],
-
         "vue/block-order": [
           "error",
           {
@@ -122,11 +121,8 @@ export async function vue({
             ],
           },
         ],
-
-        // extensions
-        "vue/dot-location": ["error", "property"],
-        "vue/dot-notation": ["error", { allowKeywords: true }],
         "vue/eqeqeq": ["error", "smart"],
+        "vue/html-closing-bracket-newline": "off",
         "vue/html-closing-bracket-spacing": "off",
         "vue/html-comment-content-newline": [
           "error",
@@ -167,8 +163,6 @@ export async function vue({
         "vue/no-irregular-whitespace": "error",
         "vue/no-loss-of-precision": "error",
         "vue/no-multi-spaces": "off",
-
-        // off
         "vue/no-multiple-template-root": "off",
         "vue/no-restricted-syntax": [
           "error",
