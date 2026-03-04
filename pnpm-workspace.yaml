@@ -80,7 +80,6 @@ catalogs:
     "eslint-plugin-vue": "^10.6.2"
     "eslint-plugin-yml": "^1.19.1"
     "globals": "^16.5.0"
-    "jsonc-eslint-parser": "^2.4.2"
     "toml-eslint-parser": "^0.10.1"
     "typescript-eslint": "^8.50.1"
     "vue-eslint-parser": "^10.2.0"

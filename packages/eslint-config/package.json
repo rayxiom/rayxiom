@@ -76,7 +76,6 @@
     "eslint-plugin-yml": "catalog:eslint",
     "find-up-simple": "catalog:",
     "globals": "catalog:eslint",
-    "jsonc-eslint-parser": "catalog:eslint",
     "local-pkg": "catalog:",
     "toml-eslint-parser": "catalog:eslint",
     "typescript-eslint": "catalog:eslint",

@@ -25,10 +25,9 @@ export async function pnpm(
     yaml = true,
   } = options;
 
-  const [pluginPnpm, yamlParser, jsoncParser] = await Promise.all([
+  const [pluginPnpm, yamlParser] = await Promise.all([
     interopDefault(import("eslint-plugin-pnpm")),
     yaml ? interopDefault(import("yaml-eslint-parser")) : undefined,
-    json ? interopDefault(import("jsonc-eslint-parser")) : undefined,
   ]);
 
   const configs: TypedFlatConfigItem[] = [];
@@ -36,9 +35,7 @@ export async function pnpm(
   if (json) {
     configs.push({
       files: ["package.json", "**/package.json"],
-      languageOptions: {
-        parser: jsoncParser,
-      },
+      language: "jsonc/x",
       name: "rayxiom/pnpm/package-json",
       plugins: {
         pnpm: pluginPnpm,

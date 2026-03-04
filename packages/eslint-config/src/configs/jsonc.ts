@@ -3,10 +3,7 @@ import type { TypedFlatConfigItem } from "../types";
 import { interopDefault } from "../utils";
 
 export async function jsonc(): Promise<TypedFlatConfigItem[]> {
-  const [parserJsonc, pluginJsonc] = await Promise.all([
-    interopDefault(import("jsonc-eslint-parser")),
-    interopDefault(import("eslint-plugin-jsonc")),
-  ]);
+  const pluginJsonc = await interopDefault(import("eslint-plugin-jsonc"));
 
   return [
     {
@@ -18,9 +15,7 @@ export async function jsonc(): Promise<TypedFlatConfigItem[]> {
     {
       name: "rayxiom/jsonc/rules",
       files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC, GLOB_ESLINTRC],
-      languageOptions: {
-        parser: parserJsonc,
-      },
+      language: "jsonc/x",
       // @keep-sorted
       rules: {
         ...(pluginJsonc.configs.base.overrides[0].rules as any),
