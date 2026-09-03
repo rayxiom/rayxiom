@@ -6,10 +6,7 @@ export async function html(): Promise<TypedFlatConfigItem[]> {
   const [parserHtml, pluginHtml, pluginHtmlJsSupport] = await Promise.all([
     interopDefault(import("@html-eslint/parser")),
     interopDefault(import("@html-eslint/eslint-plugin")),
-    interopDefault(
-      // @ts-expect-error No declaration
-      import("eslint-plugin-html"),
-    ),
+    interopDefault(import("eslint-plugin-html")),
   ]);
 
   return [

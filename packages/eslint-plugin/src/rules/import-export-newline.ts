@@ -5,9 +5,7 @@ import { createEslintRule, getNextNode, getPreviousNode } from "../utils";
 
 export const RULE_NAME = "import-export-newline";
 export type MessageIds =
-  | "newlineAfterLastImport"
-  | "newlineBeforeExport"
-  | "newlineAfterExport";
+  "newlineAfterLastImport" | "newlineBeforeExport" | "newlineAfterExport";
 export type Options = [];
 
 const isExportDeclaration = (node: TSESTree.Node) =>

@@ -12,8 +12,7 @@ function guessNewline(sourceCode: TSESLint.SourceCode): string {
 }
 
 type WhitespaceToken =
-  | { type: "Spaces"; code: string }
-  | { type: "Newline"; code: string };
+  { type: "Spaces"; code: string } | { type: "Newline"; code: string };
 
 type EnhanceToken<T> = T & { code: string };
 
@@ -781,7 +780,7 @@ export function printWithSortedSpecifiers<TNode extends TSESTree.Node>(
     const maybeNewline =
       previous != null &&
       needsStartingNewline(item.before) &&
-      (previous.after.length <= 0 ||
+      (previous.after.length === 0 ||
         !isNewline(previous.after[previous.after.length - 1]))
         ? [{ type: "Newline", code: newline } satisfies WhitespaceToken]
         : [];

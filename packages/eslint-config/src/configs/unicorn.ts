@@ -1,3 +1,4 @@
+import { GLOB_ASTRO, GLOB_SRC, GLOB_VUE } from "../globs";
 import { pluginUnicorn } from "../plugins";
 import type { TypedFlatConfigItem } from "../types";
 
@@ -11,6 +12,7 @@ export const unicorn = (): TypedFlatConfigItem[] => [
   },
   {
     name: "so1ve/unicorn/rules",
+    files: [GLOB_SRC, GLOB_ASTRO, GLOB_VUE],
     // @keep-sorted
     rules: {
       "unicorn/consistent-assert": "error",
@@ -21,8 +23,8 @@ export const unicorn = (): TypedFlatConfigItem[] => [
       "unicorn/escape-case": "error",
       "unicorn/explicit-length-check": "error",
       "unicorn/new-for-builtins": "error",
-      "unicorn/no-array-for-each": "error",
       "unicorn/no-await-in-promise-methods": "error",
+      "unicorn/no-for-each": "error",
       "unicorn/no-for-loop": "error",
       "unicorn/no-instanceof-builtins": "error",
       "unicorn/no-lonely-if": "error",

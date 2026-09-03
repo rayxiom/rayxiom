@@ -43,7 +43,6 @@ export async function astro({ overrides = {} }: OptionsOverrides = {}): Promise<
         "astro/no-set-html-directive": "off",
         "astro/no-unused-define-vars-in-style": "error",
         "astro/semi": "off",
-        "astro/valid-compile": "error",
 
         ...overrides,
       },
